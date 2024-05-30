@@ -13,41 +13,36 @@ Se desea un programa que ayude diciendo las preferencias segun el genero:
       Maquillaje, Series TV, Cine, filatropia
 */      
 using System;
-class Program {
-   static void Main (string[] args) {
-       
-       Console.WriteLine("Ingrese su genero (Hombre/Mujer): ");
-       string genero = Console.ReadLine();
-       
-       Console.WriteLine("Ingrese su edad");
-       int edad = Int32.Parse(Console.ReadLine());
-       
-       if (genero == "Hombre"){
-           
-       if (edad < 18){
-       }
-         // Preferencias para hombres menores
-         Console.WriteLine("Tus preferencias son: Figuras de accion, Caricaturas, Serie de TV.");
-       }
-       
-       else
-       {
-         // Preferencias para hombres mayores  
-         Console.WriteLine("Tus preferencias son: Cine, picnic y filantropia.");
-       }
-       
+class  Program {
+  static void Main() {
 
-  if (genero == "Mujer"){
-  }
-  if (edad < 18){
-  {
-      // Preferencias para mujeres menores
-      Console.WriteLine(" Tus preferencias son Muñecas, Maquillaje, series de TV.");
-      
+    Console.Write("escribir hombre o mujer: ");
+    string genero =(Console.ReadLine());
+
+    Console.Write("escribir edad en números: ");
+    int edad = Int32.Parse(Console.ReadLine());
+
+    // 3 Validar opción elegida
+    if(genero == "hombre"){
+        if ( edad < 18 )
+        Console.WriteLine("sus preferencias son: Figuras de acción. caricaturas, series tv" );
     }
-      // Preferencias para mujeres mayores
-      Console.WriteLine(" Maquillaje, Series TV, Cine, filatropia.");
-           
-           
-       }
+
+    if(genero == "hombre" ){
+        if ( edad >= 18 )
+        Console.WriteLine("sus preferencias son: cine, picnic y filantropía " );
     }
+
+    if(genero == "mujer" ){
+        if ( edad < 18 )
+        Console.WriteLine("sus preferencias son: muñecas, maquillaje, serie tv ");
+    }
+
+    if(genero == "mujer" ){
+        if ( edad >= 18 )
+       Console.WriteLine("sua preferencias son:  maquillaje,series tv, cine, filantropía " );    
+    }
+
+    }
+  }  
+
